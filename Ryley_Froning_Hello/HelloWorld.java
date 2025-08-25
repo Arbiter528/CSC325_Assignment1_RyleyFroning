@@ -1,13 +1,16 @@
+// This branch is is orginally branch is what branch1 was orginally. I accidentally overwrote branch1 with branch2
 public class HelloWorld{ 
-    private String name; 
+    String name; 
     private int age;
     
-    public HelloWorld(String name, int age) {
+    public HelloWorld(String name) {
          this.name = name; 
-         this.age = age;
+         
         } 
     
-    public void introduce() {
+    public void introduce(String name, int age) {
+        this.name = name;
+        this.age = age;
         System.out.println("My name is " + name + " and I am " + age + " years old.");
     }
     
@@ -18,12 +21,12 @@ public class HelloWorld{
         System.out.println(message);
     }
     public static void main(String[] args) { 
-        HelloWorld student = new HelloWorld("Jason", 20); 
-        HelloWorld student2 = new HelloWorld("John", 21); 
+        HelloWorld student = new HelloWorld("Jason"); 
+        HelloWorld student2 = new HelloWorld("John"); 
         student2.greet();
-        student.introduce();
+        student.introduce("Jason", 20);
         student.greet(); 
         student2.greet("good morning");
-        student2.introduce();
+        student2.introduce("John", 21);
     } 
 }
