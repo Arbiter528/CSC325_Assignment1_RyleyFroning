@@ -1,14 +1,13 @@
 public class HelloWorld{ 
-    String name; 
+    private String name; 
     private int age;
     
-    public HelloWorld(String name) {
+    public HelloWorld(String name, int age) {
          this.name = name; 
+         this.age = age;
         } 
     
-    public void introduce(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public void introduce() {
         System.out.println("My name is " + name + " and I am " + age + " years old.");
     }
     
@@ -19,12 +18,12 @@ public class HelloWorld{
         System.out.println(message);
     }
     public static void main(String[] args) { 
-        HelloWorld student = new HelloWorld("Jason"); 
-        HelloWorld student2 = new HelloWorld("John"); 
+        HelloWorld student = new HelloWorld("Jason", 20); 
+        HelloWorld student2 = new HelloWorld("John", 21); 
         student2.greet();
-        student.introduce("Jason", 20);
+        student.introduce();
         student.greet(); 
         student2.greet("good morning");
-        student2.introduce("John", 21);
+        student2.introduce();
     } 
 }
