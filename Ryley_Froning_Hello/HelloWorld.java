@@ -15,10 +15,16 @@ public class HelloWorld{
     public void greet() { 
         System.out.println("Hello, " + name + "!"); 
     } 
-
+    public void greet(String message) { 
+        System.out.println(message);
+    }
     public static void main(String[] args) { 
         HelloWorld student = new HelloWorld("Jason"); 
+        HelloWorld student2 = new HelloWorld("John"); 
+        student2.greet();
         student.introduce("Jason", 20);
         student.greet(); 
+        student2.greet("good morning");
+        student2.introduce("John", 21);
     } 
 }
